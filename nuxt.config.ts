@@ -11,5 +11,16 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxt/eslint']
-})
+  modules: ['@nuxt/eslint'],
+
+  runtimeConfig: {
+    public: {
+      apiUrl: 'https://api.example.com'
+    }
+  },
+
+  typescript: {
+    strict: true,
+    typeCheck: true
+  }
+});

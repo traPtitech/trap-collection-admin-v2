@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup lang="ts">
+  const response = await trapCollectionApi;
+</script>
 
 <template>
   <div class="w-dvw h-dvh flex justify-center items-center">
