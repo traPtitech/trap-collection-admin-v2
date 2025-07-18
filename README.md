@@ -8,6 +8,28 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 npm run generate-api
 ```
 
+## .env の設定
+
+.env.exmple をコピーして
+.env.development
+と
+.env
+を作成。
+
+それぞれ
+
+```
+# .env.development
+NUXT_PUBLIC_API_URL=https://collection-dev.trapti.tech/api/v2
+```
+
+```
+# .env
+NUXT_PUBLIC_API_URL=https://collection.trap.jp/api/v2
+```
+
+を推奨
+
 ## Setup
 
 ```bash

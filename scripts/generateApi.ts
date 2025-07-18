@@ -3,15 +3,12 @@ import { mkdir } from 'fs/promises';
 import { resolve } from 'path';
 import { promisify } from 'util';
 
-import addApis from './addApis';
-
 const execPromise = promisify(exec);
 
 const SWAGGER_PATH =
   'https://raw.githubusercontent.com/traPtitech/trap-collection-server/main/docs/openapi/v2.yaml';
 const GENERATED_DIR = 'generated-api';
 
-// eslint-disable-next-line no-undef
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
 const generateCmd = [
@@ -19,7 +16,7 @@ const generateCmd = [
   'openapi-generator-cli',
   'generate',
   '-g',
-  'typescript-axios',
+  'typescript-fetch',
   '-i',
   SWAGGER_PATH,
   '-o',

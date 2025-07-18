@@ -15,12 +15,26 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiUrl: 'https://api.example.com'
+      apiUrl: 'https://api.example.com',
+      nodeEnv: process.env.NODE_ENV || 'development'
     }
   },
 
   typescript: {
     strict: true,
     typeCheck: true
+  },
+
+  vite: {
+    server: {
+      proxy: {
+        '/proxy': {
+          target: process.env.NUXT_PUBLIC_API_URL,
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/proxy/, '')
+        }
+      }
+    }
   }
 });
