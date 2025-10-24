@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      tailwindcss: {},
+      '@tailwindcss/postcss': {},
       autoprefixer: {}
     }
   },
@@ -15,8 +15,11 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiUrl: 'https://api.example.com',
-      nodeEnv: process.env.NODE_ENV || 'development'
+      apiUrl:
+        process.env.NUXT_PUBLIC_API_URL ||
+        'https://collection-dev.trapti.tech/api/v2',
+      nodeEnv: process.env.NUXT_PUBLIC_NODE_ENV || 'development',
+      useMockApi: process.env.NUXT_PUBLIC_USE_MOCK_API === 'true'
     }
   },
 
@@ -25,14 +28,22 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
+  devServer: {
+    port: 8080
+  },
+
   vite: {
     server: {
       proxy: {
-        '/proxy': {
-          target: process.env.NUXT_PUBLIC_API_URL,
+        '/api/v2': {
+          target:
+            process.env.NUXT_PUBLIC_API_URL ||
+            'https://collection-dev.trapti.tech',
           changeOrigin: true,
           secure: false,
-          rewrite: (path) => path.replace(/^\/proxy/, '')
+          // ローカル開発用の設定
+          cookieDomainRewrite: 'localhost',
+          cookiePathRewrite: '/'
         }
       }
     }

@@ -23,4 +23,7 @@ logs
 .env.*
 !.env.example
 
-generated-api
+api-client
+
+*storybook.log
+storybook-static
