@@ -7,15 +7,17 @@ const meta = {
   component: BaseButton,
   tags: ['autodocs'],
   argTypes: {
+    label: {
+      control: 'text'
+    },
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'danger'],
+      options: ['primary', 'secondary', 'tertiary', 'danger'],
       description: 'The visual style variant of the button'
     },
-    size: {
-      control: 'select',
-      options: ['sm', 'md', 'lg'],
-      description: 'The size of the button'
+    icon: {
+      control: 'text',
+
     },
     disabled: {
       control: 'boolean',
@@ -27,8 +29,9 @@ const meta = {
     }
   },
   args: {
+    label: 'Button',
     variant: 'primary',
-    size: 'md',
+    icon: 'material-symbols:edit-outline-rounded',
     disabled: false
   }
 } satisfies Meta<typeof BaseButton>;
