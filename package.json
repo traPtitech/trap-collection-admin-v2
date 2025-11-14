@@ -9,9 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint --fix --ext .js,.ts,.vue --cache .",
-    "generate-api": "openapi-ts",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "generate-api": "openapi-ts"
   },
   "dependencies": {
     "@nuxt/eslint": "1.9.0",
@@ -30,13 +28,6 @@
     "@oxc-minify/binding-linux-x64-gnu": "^0.95.0",
     "@oxc-parser/binding-linux-x64-gnu": "^0.95.0",
     "@oxc-transform/binding-linux-x64-gnu": "^0.95.0",
-    "@storybook/addon-essentials": "7.6.20",
-    "@storybook/addon-interactions": "7.6.20",
-    "@storybook/addon-links": "7.6.20",
-    "@storybook/blocks": "7.6.20",
-    "@storybook/test": "7.6.20",
-    "@storybook/vue3": "7.6.20",
-    "@storybook/vue3-vite": "7.6.20",
     "@types/node": "^24.9.1",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
@@ -44,23 +35,14 @@
     "autoprefixer": "^10.4.21",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "eslint-plugin-storybook": "^9.1.15",
     "highlight.js": "^11.11.1",
     "msw": "^2.11.6",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "storybook": "7.6.20",
     "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "vite": "5.4.21",
     "vue-tsc": "^3.1.1"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   },
   "msw": {
     "workerDirectory": [
