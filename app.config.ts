@@ -3,4 +3,4 @@ export default defineAppConfig({
     mode: 'css',
     cssLayer: 'base'
   }
-})
+});

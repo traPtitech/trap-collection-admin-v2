@@ -22,7 +22,11 @@
       <div class="mb-6">
         <h3 class="text-lg font-medium mb-2">With Icons</h3>
         <div class="flex flex-wrap gap-2">
-          <AtomsBaseButton label="Primary" variant="primary" icon="material-symbols:home-rounded" />
+          <AtomsBaseButton
+            label="Primary"
+            variant="primary"
+            icon="material-symbols:home-rounded"
+          />
           <AtomsBaseButton
             label="Secondary"
             variant="secondary"
