@@ -2,14 +2,16 @@
   import { computed } from 'vue';
 
   interface Props {
-    variant?: 'primary' | 'secondary' | 'danger';
-    size?: 'sm' | 'md' | 'lg';
+    label?: string;
+    variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
+    icon?: string | undefined;
     disabled?: boolean;
   }
 
   const props = withDefaults(defineProps<Props>(), {
+    label: '',
     variant: 'primary',
-    size: 'md',
+    icon: undefined,
     disabled: false
   });
 
@@ -19,31 +21,24 @@
 
   const buttonClass = computed(() => {
     const base =
-      'inline-flex items-center justify-center font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors';
+      'flex gap-3 items-center font-extrabold rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-colors px-4 py-1.5 text-base';
 
     const variants = {
       primary:
-        'bg-primary-500 text-white hover:bg-primary-700 focus:ring-primary-500',
+        'bg-primary-500 text-white hover:enabled:bg-primary-600 focus-visible:ring-primary-500',
       secondary:
-        'bg-neutral-200 text-neutral-900 hover:bg-neutral-300 focus:ring-neutral-500',
+        'bg-transparent border-primary-500 border-2 text-primary-500 hover:enabled:border-primary-600 hover:enabled:bg-primary-50 focus-visible:ring-primary-500',
+      tertiary:
+        'bg-transparent text-primary-500 hover:enabled:bg-neutral-100 focus-visible:ring-primary-500',
       danger:
-        'bg-danger-500 text-white hover:bg-danger-700 focus:ring-danger-500'
+        'bg-transparent border-danger-500 border-2 text-danger-500 hover:enabled:border-danger-600 hover:enabled:bg-danger-50 focus-visible:ring-danger-500'
     };
 
-    const sizes = {
-      sm: 'px-3 py-2 text-sm',
-      md: 'px-4 py-2 text-base',
-      lg: 'px-6 py-3 text-lg'
-    };
+    const disabledClass = props.disabled
+      ? 'opacity-50 cursor-not-allowed'
+      : 'cursor-pointer';
 
-    const disabledClass = props.disabled ? 'opacity-50 cursor-not-allowed' : '';
-
-    return [
-      base,
-      variants[props.variant],
-      sizes[props.size],
-      disabledClass
-    ].join(' ');
+    return [base, variants[props.variant], disabledClass].join(' ');
   });
 </script>
 
@@ -53,6 +48,7 @@
     :disabled="disabled"
     @click="emit('click', $event)"
   >
-    <slot />
+    <Icon v-if="icon" :name="icon" class="h-5 w-5" />
+    <span>{{ label }}</span>
   </button>
 </template>
