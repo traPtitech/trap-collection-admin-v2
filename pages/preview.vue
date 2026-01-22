@@ -91,5 +91,23 @@
       </div>
     </section>
 
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Icon</h2>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-medium mb-2">Examples</h3>
+        <div class="flex flex-wrap gap-2">
+          <AtomsIcon
+            username="rurun"
+          />
+          <AtomsIcon
+            username="yukikurage"
+            bordered
+          />
+
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
