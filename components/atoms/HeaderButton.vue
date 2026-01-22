@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <a :class="buttonClass" :href="href">
+  <NuxtLink :class="buttonClass" :to="href">
     <span>{{ label }}</span>
-  </a>
+  </NuxtLink>
 </template>
