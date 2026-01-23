@@ -2,15 +2,13 @@
   import { computed } from 'vue';
 
   interface Props {
-    label?: string;
+    label: string;
     active?: boolean;
-    href?: string;
+    href: string;
   }
 
   const props = withDefaults(defineProps<Props>(), {
-    label: '',
     active: false,
-    href: '#',
   });
 
   const buttonClass = computed(() => {
