@@ -72,5 +72,17 @@
         </div>
       </div>
     </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">HeaderLink</h2>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-medium mb-2">Examples</h3>
+        <div class="flex flex-wrap gap-2">
+          <AtomsHeaderLink label="Games" to="https://trap.jp" active />
+          <AtomsHeaderLink label="Editions" to="https://trap.jp" />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
