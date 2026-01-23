@@ -3,8 +3,8 @@
 
   interface Props {
     label: string;
-    active?: boolean;
     to: string;
+    active?: boolean;
     icon?: string | undefined;
   }
 

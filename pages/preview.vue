@@ -66,6 +66,7 @@
           <AtomsNavLink
             label="Your Games"
             :active="true"
+            to="https://example.com"
             icon="material-symbols:person"
           />
         </div>
