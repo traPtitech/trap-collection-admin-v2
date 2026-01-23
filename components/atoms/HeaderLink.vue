@@ -2,15 +2,13 @@
   import { computed } from 'vue';
 
   interface Props {
-    label?: string;
+    label: string;
+    to: string;
     active?: boolean;
-    href?: string;
   }
 
   const props = withDefaults(defineProps<Props>(), {
-    label: '',
-    active: false,
-    href: '#',
+    active: false
   });
 
   const buttonClass = computed(() => {
@@ -18,15 +16,15 @@
       'flex items-center font-extrabold transition-colors px-3 py-0.5 cursor-pointer';
 
     const activeClass = props.active
-      ? 'text-primary-500'
-      : 'text-neutral-800';
+      ? 'text-primary-500 hover:opacity-85'
+      : 'text-neutral-800 hover:opacity-85';
 
     return [base, activeClass].join(' ');
   });
 </script>
 
 <template>
-  <a :class="buttonClass" :href="href">
+  <NuxtLink :class="buttonClass" :to="to">
     <span>{{ label }}</span>
-  </a>
+  </NuxtLink>
 </template>
