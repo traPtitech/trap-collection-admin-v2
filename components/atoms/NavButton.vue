@@ -2,16 +2,14 @@
   import { computed } from 'vue';
 
   interface Props {
-    label?: string;
+    label: string;
     active?: boolean;
-    to?: string;
+    to: string;
     icon?: string | undefined;
   }
 
   const props = withDefaults(defineProps<Props>(), {
-    label: '',
     active: false,
-    to: '#',
     icon: undefined
   });
 
