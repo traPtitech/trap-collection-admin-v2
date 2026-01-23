@@ -97,10 +97,10 @@
       <div class="mb-6">
         <h3 class="text-lg font-medium mb-2">Examples</h3>
         <div class="flex flex-wrap gap-2">
-          <AtomsIcon
+          <AtomsAvatar
             username="rurun"
           />
-          <AtomsIcon
+          <AtomsAvatar
             username="yukikurage"
             bordered
           />
