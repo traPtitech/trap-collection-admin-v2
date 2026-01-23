@@ -95,7 +95,7 @@
       <h2 class="text-2xl font-semibold mb-4">Icon</h2>
 
       <div class="mb-6">
-        <h3 class="text-lg font-medium mb-2">Examples</h3>
+        <h3 class="text-lg font-medium mb-2">Bordered</h3>
         <div class="flex flex-wrap gap-2">
           <AtomsAvatar
             username="rurun"
@@ -106,6 +106,32 @@
           />
 
         </div>
+
+        <h3 class="text-lg font-medium mb-2">Size</h3>
+        <div class="flex flex-wrap gap-2">
+          <AtomsAvatar
+            username="traP"
+            size="xs"
+          />
+          <AtomsAvatar
+            username="traP"
+            size="sm"
+          />
+          <AtomsAvatar
+            username="traP"
+            size="md"
+          />
+          <AtomsAvatar
+            username="traP"
+            size="lg"
+          />
+          <AtomsAvatar
+            username="traP"
+            size="xl"
+          />
+
+        </div>
+
       </div>
     </section>
 
