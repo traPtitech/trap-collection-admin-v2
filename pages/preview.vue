@@ -61,7 +61,7 @@
           <AtomsNavButton
             label="All Games"
             icon="material-symbols:globe-asia"
-            href="https://trap.jp"
+            to="https://trap.jp"
           />
           <AtomsNavButton
             label="Your Games"
@@ -71,6 +71,5 @@
         </div>
       </div>
     </section>
-
   </div>
 </template>

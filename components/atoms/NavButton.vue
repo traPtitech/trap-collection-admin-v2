@@ -4,14 +4,14 @@
   interface Props {
     label?: string;
     active?: boolean;
-    href?: string;
+    to?: string;
     icon?: string | undefined;
   }
 
   const props = withDefaults(defineProps<Props>(), {
     label: '',
     active: false,
-    href: '#',
+    to: '#',
     icon: undefined
   });
 
@@ -28,8 +28,8 @@
 </script>
 
 <template>
-  <a :class="buttonClass" :href="href">
+  <NuxtLink :class="buttonClass" :to="to">
     <Icon v-if="icon" :name="icon" class="h-5 w-5" />
     <span>{{ label }}</span>
-  </a>
+  </NuxtLink>
 </template>
