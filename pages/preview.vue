@@ -78,18 +78,10 @@
       <div class="mb-6">
         <h3 class="text-lg font-medium mb-2">Examples</h3>
         <div class="flex flex-wrap gap-2">
-          <AtomsHeaderLink
-            label="Games"
-            href="https://trap.jp"
-            active
-          />
-          <AtomsHeaderLink
-            label="Editions"
-            href="https://trap.jp"
-          />
+          <AtomsHeaderLink label="Games" to="https://trap.jp" active />
+          <AtomsHeaderLink label="Editions" to="https://trap.jp" />
         </div>
       </div>
     </section>
-
   </div>
 </template>

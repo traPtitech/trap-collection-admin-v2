@@ -3,12 +3,12 @@
 
   interface Props {
     label: string;
-    href: string;
+    to: string;
     active?: boolean;
   }
 
   const props = withDefaults(defineProps<Props>(), {
-    active: false,
+    active: false
   });
 
   const buttonClass = computed(() => {
@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <NuxtLink :class="buttonClass" :to="href">
+  <NuxtLink :class="buttonClass" :to="to">
     <span>{{ label }}</span>
   </NuxtLink>
 </template>
