@@ -16,8 +16,8 @@
       'flex items-center font-extrabold transition-colors px-3 py-0.5 cursor-pointer';
 
     const activeClass = props.active
-      ? 'text-primary-500'
-      : 'text-neutral-800';
+      ? 'text-primary-500 hover:opacity-85'
+      : 'text-neutral-800 hover:opacity-85';
 
     return [base, activeClass].join(' ');
   });
