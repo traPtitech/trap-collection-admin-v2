@@ -3,8 +3,8 @@
 
   interface Props {
     label: string;
-    active?: boolean;
     href: string;
+    active?: boolean;
   }
 
   const props = withDefaults(defineProps<Props>(), {
