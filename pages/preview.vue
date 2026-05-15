@@ -53,7 +53,7 @@
     </section>
 
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">NavButton</h2>
+      <h2 class="text-2xl font-semibold mb-4">NavLink</h2>
 
       <div class="mb-6">
         <h3 class="text-lg font-medium mb-2">Examples</h3>
@@ -127,6 +127,12 @@
         </div>
 
       </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">SearchBar</h2>
+
+      <SearchBar></SearchBar>
     </section>
 
   </div>
