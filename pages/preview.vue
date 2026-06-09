@@ -1,5 +1,6 @@
 <script setup lang="ts">
   // Component Preview Page
+  const usernames: string[] = ["rurun", "yukikurage", "ikura-hamu", "masky5859", "shr1444", "kitsne", "w4ma"];
 </script>
 
 <template>
@@ -86,7 +87,7 @@
     </section>
 
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Icon</h2>
+      <h2 class="text-2xl font-semibold mb-4">Avatar</h2>
 
       <div class="mb-6">
         <h3 class="text-lg font-medium mb-2">Bordered</h3>
@@ -126,6 +127,86 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Avatars</h2>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-medium mb-2">Bordered</h3>
+        <div class="flex flex-wrap gap-2 flex-col">
+          <AtomsAvatars
+            :usernames="usernames"
+            bordered
+            size="lg"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :bordered="false"
+            size="lg"
+          />
+        </div>
+        <h3 class="text-lg font-medium mb-2">Size</h3>
+        <div class="flex flex-wrap gap-2 flex-col">
+          <AtomsAvatars
+            :usernames="usernames"
+            bordered
+            size="xs"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            size="sm"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            size="md"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            size="lg"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            size="xl"
+          />
+        </div>
+        <h3 class="text-lg font-medium mb-2">Max</h3>
+        <div class="flex flex-wrap gap-2 flex-col">
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="0"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="1"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="2"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="3"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="4"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="5"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="6"
+          />
+          <AtomsAvatars
+            :usernames="usernames"
+            :max="7"
+          />
+
+        </div>
       </div>
     </section>
 
