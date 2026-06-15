@@ -135,5 +135,30 @@
       <SearchBar></SearchBar>
     </section>
 
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">AppHeader</h2>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-medium mb-2">Default</h3>
+        <div class="border border-neutral-200 rounded-lg overflow-hidden">
+          <OrganismsAppHeader username="yukikurage" />
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-medium mb-2">Custom nav items</h3>
+        <div class="border border-neutral-200 rounded-lg overflow-hidden">
+          <OrganismsAppHeader
+            username="traP"
+            :nav-items="[
+              { label: 'Games', to: '/' },
+              { label: 'Editions', to: '/editions' },
+              { label: 'Seats', to: '/seats' }
+            ]"
+          />
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
