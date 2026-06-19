@@ -3,6 +3,9 @@
 /* M PLUS 2 フォント */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
 
+/* Montserrat フォント (ロゴ用) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');
+
 /* テーマカラーの定義 */
 @theme {
   /* Primary (メインカラー - #005BAC) */
@@ -66,6 +69,7 @@
 
   /* フォント設定 */
   --font-sans: 'M PLUS 2', ui-sans-serif, system-ui, sans-serif;
+  --font-montserrat: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ダークモード対応 (将来用) */

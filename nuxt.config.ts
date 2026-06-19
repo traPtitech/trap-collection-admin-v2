@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     public: {
       apiUrl:
         process.env.NUXT_PUBLIC_API_URL ||
-        'https://collection-dev.trapti.tech/api/v2',
+        'https://collection-dev.trapti.tech',
       nodeEnv: process.env.NUXT_PUBLIC_NODE_ENV || 'development',
       useMockApi: process.env.NUXT_PUBLIC_USE_MOCK_API === 'true'
     }

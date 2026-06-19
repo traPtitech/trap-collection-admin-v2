@@ -1,7 +1,10 @@
 <script setup lang="ts">
   import { useGames } from '~/composables/useGames';
 
+  const { requireAuth } = useAuth();
   const { data } = useGames();
+
+  onMounted(requireAuth);
 </script>
 
 <template>
