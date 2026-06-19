@@ -14,13 +14,16 @@
     bordered: true,
   });
 
+  const normalizedMax = computed(() => Math.max(0, Math.floor(props.max)));
+
   const usernames_filtered = computed((): string[] => {
-    return props.usernames.slice(0, props.max);
+    return props.usernames.slice(0, normalizedMax.value);
   });
 
   const plusClass = computed(() => {
-    const base =
-      'ml-[-6px] bg-gray-200 rounded-full flex justify-center items-center truncate';
+    const base = 'bg-gray-200 rounded-full flex justify-center items-center truncate';
+
+    const margin = normalizedMax.value == 0 ? '' : 'ml-[-6px]'
 
     const borderedClass = props.bordered
       ? 'border-2 border-white'
@@ -34,11 +37,11 @@
       xl: 'w-10 h-10 text-[15px]',
     }[props.size];
 
-    return [base, borderedClass, sizeClass].join(' ');
+    return [base, margin,borderedClass, sizeClass].join(' ');
   });
 
   const plusText = computed(() => {
-    return "+"+(props.usernames.length - props.max);
+    return "+"+(props.usernames.length - normalizedMax.value);
   });
 
 </script>
@@ -46,8 +49,8 @@
 <template>
   <div class="flex">
     <AtomsAvatar
-      v-for="username in usernames_filtered"
-      :key="username"
+      v-for="(username, index) in usernames_filtered"
+      :key="`${username}+${index}`"
       :username="username"
       :bordered="bordered"
       :size="size"
