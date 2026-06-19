@@ -205,9 +205,11 @@
             :usernames="usernames"
             :max="7"
           />
+        </div>
+      </div>
     </section>
     <section class="mb-12">
-      
+
        <h2 class="text-2xl font-semibold mb-4">SearchBar</h2>
 
        <SearchBar></SearchBar>
